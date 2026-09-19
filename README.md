@@ -1,4 +1,4 @@
-# Pluto
+# Pluto LM
 
 Pluto is a small language model built from scratch, to learn and experiment with LLM architecture, training, and scaling.
 
@@ -9,15 +9,15 @@ Pluto models will be available on Hugging Face at https://huggingface.co/radupar
 
 ## Roadmap
 
-- [ ] **Pluto v1 100M** — Initial small-scale model & proof of concept
-- [ ] **Pluto v1 500M** — Mid-size scaled up model
-- [ ] **Pluto v1.5 1B** — Second-generation, larger, denser, model
-- [ ] **Pluto v1.5 MoE** — Mixture-of-experts variant built upon Pluto v1.5
-- [ ] **Pluto v1.5 Vision** — Vision-language variant built upon Pluto v1.5
+- [ ] **Pluto v1 100M**: Initial small-scale model & proof of concept
+- [ ] **Pluto v1 500M**: Mid-size scaled up model
+- [ ] **Pluto v1.5 1B**: Second-generation, larger, denser, model
+- [ ] **Pluto v1.5 MoE**: Mixture-of-experts variant built upon Pluto v1.5
+- [ ] **Pluto v1.5 Vision**: Vision-language variant built upon Pluto v1.5
 
 ## Status
 
-🚧 Early development. Architecture, training data, and benchmarks will be documented here as they're finalized.
+Early development. Architecture, training data, and benchmarks will be documented here as they're finalized.
 
 ## Goals
 
