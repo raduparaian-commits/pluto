@@ -1,16 +1,28 @@
 import torch
 from torch import nn
 
-VOCAB_SIZE = 32_000
+
 D_MODEL = 768
 
-embedding = nn.Embedding(VOCAB_SIZE, D_MODEL)
 
-tokens = torch.tensor([12, 593])
+class RMSNorm(nn.Module):
+    def __init__(self, dim):
+        super().__init__()
 
-output = embedding(tokens)
+        self.weight = nn.Parameter(torch.ones(dim))
 
-print(f"Input shape: {tokens.shape}")
-print(f"Output shape: {output.shape}")
-print(output)
+    def forward(self, x):
+        rms = torch.sqrt(torch.mean(x ** 2, dim=-1, keepdim=True))
+        x = x / (rms + 1e-6)
 
+        return x * self.weight
+
+
+norm = RMSNorm(D_MODEL)
+
+x = torch.randn(2, 768)
+
+output = norm(x)
+
+print("Input shape:", x.shape)
+print("Output shape:", output.shape)
